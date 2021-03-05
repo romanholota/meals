@@ -52,7 +52,7 @@ class Meal extends React.Component {
                         ingredientNames.forEach((value, i) => ingredients.push(`${measures[i].toLowerCase()} ${ingredientNames[i].toLowerCase()}`))
 
                         return (
-                            <div className="container bg-light p-5 m-5" key={mealId}>
+                            <div className="container bg-light p-5 mx-auto my-5" key={mealId}>
                                 <h1>{strMeal}</h1>
                                 <h2>Ingredients</h2>
                                 <ul>

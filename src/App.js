@@ -13,6 +13,9 @@ class App extends React.Component {
     render() {
         return (
             <React.StrictMode>
+                <div class="mx-auto text-center mt-5">
+                    <h1 class="display-2" href="#">Random Recipes</h1>
+                </div>
                 {this.loadMultiple(3)}
             </React.StrictMode>
         );
