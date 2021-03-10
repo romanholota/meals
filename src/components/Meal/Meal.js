@@ -70,7 +70,7 @@ class Meal extends React.Component {
                         );
                     })
                 ) : (
-                    <h3>loading...</h3>
+                    <span></span>
                 )}
             </React.Fragment>
         );
