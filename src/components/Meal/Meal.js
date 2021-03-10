@@ -21,9 +21,6 @@ class Meal extends React.Component {
               meals: result.meals
             });
           },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
           (error) => {
             this.setState({
               isLoaded: true,
@@ -53,19 +50,7 @@ class Meal extends React.Component {
 
                         return (
                             <div className="container bg-light p-5 mx-auto my-5 text-center" key={mealId}>
-                                <h2 className="display-3">{strMeal}</h2>
-                                <div className="py-5">
-                                <h3 className="display-4">Ingredients</h3>
-                                <ul className="list-group pt-3">
-                                  {ingredients.map((value, index) => {
-                                    return {value} === '' ? null : <li className="list-group-item" key={index}>{value}</li>;
-                                  })}
-                                </ul>
-                                </div>
-                                <div className="py-2">                              
-                                <h3 className="display-4">Instructions</h3>
-                                <p className="pt-3 text-justify">{strInstructions}</p>
-                                </div>
+                                <h2 className="display-3" key={mealId}>{strMeal}</h2>
                             </div>
                         );
                     })

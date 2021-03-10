@@ -1,5 +1,6 @@
 import React from 'react';
 import Meal from './components/Meal/Meal'
+import Test from './components/Test/Test'
 
 class App extends React.Component {
     constructor(props) {
