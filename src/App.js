@@ -1,25 +1,20 @@
 import React from 'react';
 import Meal from './components/Meal/Meal'
-import Test from './components/Test/Test'
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            meals: [],
-            random: 1,
+            meal: <Meal />,
+            mealCount: 1,
         };
     }
 
     handleClick(e) {
-        let newMeals = [];
-        for (let i=0; i < 3; i++) {
-            newMeals.push(<Meal key={this.state.random + i} />);
-        }
         this.setState({
-             meals: newMeals,
-             random: Math.random()
-            });
+            meal: <Meal key={this.state.mealCount} />,
+            mealCount: this.state.mealCount + 1
+        });
     }
 
     render() {
@@ -29,10 +24,10 @@ class App extends React.Component {
                     <h1 className="display-2" href="#">Random Recipes</h1>
                 </div>
 
-                <div className="d-flex justify-content-center">
-                    <button className="btn btn-default" onClick={this.handleClick.bind(this)}>Load meals</button>
+                <div className="d-flex justify-content-center mt-4">
+                    <button className="btn btn-default" onClick={this.handleClick.bind(this)}>Refresh</button>
                 </div>     
-                {this.state.meals}
+                {this.state.meal}
             </React.StrictMode>
         );
     }
