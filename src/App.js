@@ -5,14 +5,14 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            meal: <Meal />,
+            meal: <Meal count="1" key="1" />,
             mealCount: 1,
         };
     }
 
     handleClick(e) {
         this.setState({
-            meal: <Meal key={this.state.mealCount} />,
+            meal: <Meal key={this.state.mealCount + 1} />,
             mealCount: this.state.mealCount + 1
         });
     }

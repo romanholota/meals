@@ -67,7 +67,9 @@ class Meal extends React.Component {
                         );
                     })
                 ) : (
-                    <span></span>
+                  <div className="container bg-light p-5 mx-auto my-5 text-center">
+                    <h2 className="display-3">Loading...</h2>
+                  </div>
                 )}
             </React.Fragment>
         );
